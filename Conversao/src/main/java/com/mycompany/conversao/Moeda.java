@@ -10,11 +10,8 @@ package com.mycompany.conversao;
  */
 public abstract class Moeda {
     private final String nome = null;
-    public String getNome(){
-        return nome;
-    }
-    public double getValor(){
-        return 0;
-    }
+    
+    public abstract String getNome();
+    public abstract double getValor();
     
 }

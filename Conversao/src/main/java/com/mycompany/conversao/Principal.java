@@ -8,17 +8,16 @@ package com.mycompany.conversao;
  *
  * @author isaac
  */
-public class Conversao {
+public class Principal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         
         Conversor c = new Conversor();
-        Real r = new Real();
-        Dolar d = new Dolar();
-        Euro e = new Euro();
-        e.setValor(83);
-        System.out.println(c.converter(e, r));
+        Real real = new Real();
+        Dolar dolar = new Dolar();
+        Euro euro = new Euro();
+        euro.setValor(83);
+        System.out.println(c.converter(euro, real));
         
         
         
