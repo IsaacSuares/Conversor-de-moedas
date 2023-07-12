@@ -19,9 +19,10 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         initComponents();
     }
     
-    //public Moeda[] moedas = {new Euro(), new Dolar(), new Real()};
+    
     public Moeda moedaOrigem = null;
     public Moeda moedaDestino = null;
+    Conversor conversor = new Conversor();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -120,12 +121,55 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void converterBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_converterBTActionPerformed
+        resultadoTF1.setText("");
+        validaEntrada(valorTF.getText());
+       
         if(moedaOrigemCB.getSelectedItem().toString().equals("<Selecione>")){
             JOptionPane.showMessageDialog(rootPane, "Você deve selecionar uma moeda de origem", "Erro", JOptionPane.ERROR_MESSAGE);
         }
-        if(moedaDestinoCB.getSelectedItem().toString().equals("<Selecione>")){
+        else if(moedaDestinoCB.getSelectedItem().toString().equals("<Selecione>")){
             JOptionPane.showMessageDialog(rootPane, "Você deve selecionar uma moeda de destino", "Erro", JOptionPane.ERROR_MESSAGE);
         }
+        else{
+            
+            
+            /*if(moedaDestinoCB.getSelectedItem().toString().equals("Real")){
+            moedaDestino = new Real();
+            }
+            if(moedaDestinoCB.getSelectedItem().toString().equals("Dólar")){
+            moedaDestino = new Dolar();
+            }
+            if(moedaDestinoCB.getSelectedItem().toString().equals("Euro ")){
+            moedaDestino = new Euro();
+            }
+            if(moedaDestinoCB.getSelectedItem().toString().equals("<Selecione>")){
+            JOptionPane.showMessageDialog(rootPane, "Você deve selecionar uma moeda", "Selecione uma moeda", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            /////////////////////////////////////////////////////////////////
+            
+            if(moedaOrigemCB.getSelectedItem().toString().equals("Real")){
+            moedaOrigem = new Real();
+            }
+            if(moedaOrigemCB.getSelectedItem().toString().equals("Dólar")){
+            moedaOrigem = new Dolar();
+            }
+            if(moedaOrigemCB.getSelectedItem().toString().equals("Euro ")){
+                moedaOrigem = new Euro();
+            }
+            if(moedaOrigemCB.getSelectedItem().toString().equals("<Selecione>")){
+            JOptionPane.showMessageDialog(rootPane, "Você deve selecionar uma moeda", "Selecione uma moeda", JOptionPane.ERROR_MESSAGE);
+            }*/
+            
+            
+            
+            moedaOrigem.setValor(Double.parseDouble(valorTF.getText().replace(',', '.')));
+            double resultado = conversor.converter(moedaOrigem, moedaDestino);
+            resultadoTF1.setText(String.valueOf(resultado));
+            
+            
+        }
+        
     }//GEN-LAST:event_converterBTActionPerformed
 
     private void valorTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTFActionPerformed
@@ -139,7 +183,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         if(moedaDestinoCB.getSelectedItem().toString().equals("Dólar")){
             moedaDestino = new Dolar();
         }
-        if(moedaDestinoCB.getSelectedItem().toString().equals("Euro ")){
+        if(moedaDestinoCB.getSelectedItem().toString().equals("Euro")){
             moedaDestino = new Euro();
         }
         if(moedaDestinoCB.getSelectedItem().toString().equals("<Selecione>")){
@@ -154,7 +198,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         if(moedaOrigemCB.getSelectedItem().toString().equals("Dólar")){
             moedaOrigem = new Dolar();
         }
-        if(moedaOrigemCB.getSelectedItem().toString().equals("Euro ")){
+        if(moedaOrigemCB.getSelectedItem().toString().equals("Euro")){
             moedaOrigem = new Euro();
         }
         if(moedaOrigemCB.getSelectedItem().toString().equals("<Selecione>")){

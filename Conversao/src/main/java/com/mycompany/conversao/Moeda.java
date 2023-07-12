@@ -9,9 +9,13 @@ package com.mycompany.conversao;
  * @author isaac
  */
 public abstract class Moeda {
+    private double valor;
     private final String nome = null;
     
     public abstract String getNome();
     public abstract double getValor();
+    public void setValor(double valor){
+        this.valor = valor;
+    };
     
 }
