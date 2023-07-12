@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.conversao;
 
 import java.io.BufferedReader;
@@ -46,7 +43,6 @@ public class Conversor {
 	        }
 	        reader.close();
 
-	        // Analisando a resposta JSON para obter o valor desejado
 	        //System.out.println(response.toString());
 	        
 	        JSONObject jsonResponse = new JSONObject(response.toString());
