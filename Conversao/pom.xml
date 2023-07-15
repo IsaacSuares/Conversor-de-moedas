@@ -16,6 +16,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <exec.mainClass>com.mycompany.conversao.Conversao</exec.mainClass>
+        <exec.mainClass>com.mycompany.conversao.Principal</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.mycompany.conversao.Principal</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
