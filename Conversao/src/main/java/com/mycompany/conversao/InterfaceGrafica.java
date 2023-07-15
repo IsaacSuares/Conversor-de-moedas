@@ -16,9 +16,11 @@ public class InterfaceGrafica extends javax.swing.JFrame {
      * Creates new form InterfaceGrafica
      */
     public InterfaceGrafica() {
+        super("Conversor de Moedas");
         initComponents();
         valorOrigemFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
         resultadoFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
+        setVisible(true);
     }
     
     
