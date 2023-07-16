@@ -18,8 +18,8 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     public InterfaceGrafica() {
         super("Conversor de Moedas");
         initComponents();
-        valorOrigemFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
-        resultadoFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
+        //valorOrigemFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
+        //resultadoFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
         setVisible(true);
     }
     
@@ -44,8 +44,8 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         valorTF = new javax.swing.JTextField();
         converterBT = new javax.swing.JButton();
         resultadoTF = new javax.swing.JTextField();
-        valorOrigemFormatadoTF = new javax.swing.JTextField();
-        resultadoFormatadoTF = new javax.swing.JTextField();
+        valorOrigemLB = new javax.swing.JLabel();
+        valorDestinoLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,33 +86,18 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         resultadoTF.setFont(new java.awt.Font("Serif", 0, 16)); // NOI18N
         resultadoTF.setForeground(new java.awt.Color(154, 160, 157));
 
-        valorOrigemFormatadoTF.setEditable(false);
-        valorOrigemFormatadoTF.setFont(new java.awt.Font("Serif", 0, 16)); // NOI18N
-        valorOrigemFormatadoTF.setForeground(new java.awt.Color(154, 160, 157));
-        valorOrigemFormatadoTF.setBorder(null);
-        valorOrigemFormatadoTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorOrigemFormatadoTFActionPerformed(evt);
-            }
-        });
+        valorOrigemLB.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        valorOrigemLB.setForeground(new java.awt.Color(154, 160, 157));
 
-        resultadoFormatadoTF.setEditable(false);
-        resultadoFormatadoTF.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
-        resultadoFormatadoTF.setForeground(new java.awt.Color(232, 234, 237));
-        resultadoFormatadoTF.setBorder(null);
-        resultadoFormatadoTF.setSelectedTextColor(new java.awt.Color(242, 242, 242));
-        resultadoFormatadoTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultadoFormatadoTFActionPerformed(evt);
-            }
-        });
+        valorDestinoLB.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        valorDestinoLB.setForeground(new java.awt.Color(232, 234, 237));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(156, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -125,25 +110,22 @@ public class InterfaceGrafica extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(converterBT)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(121, 121, 121)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(resultadoFormatadoTF)
-                        .addGap(282, 282, 282))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(valorOrigemFormatadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(398, Short.MAX_VALUE))))
+                    .addComponent(valorOrigemLB, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorDestinoLB, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(valorOrigemFormatadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(resultadoFormatadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(166, 166, 166)
+                .addGap(37, 37, 37)
+                .addComponent(valorOrigemLB)
+                .addGap(27, 27, 27)
+                .addComponent(valorDestinoLB)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(valorTF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -185,10 +167,10 @@ public class InterfaceGrafica extends javax.swing.JFrame {
             moedaOrigem.setValor(Double.parseDouble(valorTF.getText().replace(',', '.')));
             double resultado = conversor.converter(moedaOrigem, moedaDestino);
             resultadoTF.setText(String.valueOf(resultado));
+            valorOrigemLB.setText(valorTF.getText()+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
+            valorDestinoLB.setText(resultadoTF.getText() + " " + moedaDestinoCB.getSelectedItem().toString());
             
-            valorOrigemFormatadoTF.setText(valorTF.getText()+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
-            resultadoFormatadoTF.setText(resultadoTF.getText() + " " + moedaDestinoCB.getSelectedItem().toString());
-
+            
         }
 
     }//GEN-LAST:event_converterBTActionPerformed
@@ -224,14 +206,6 @@ public class InterfaceGrafica extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_moedaOrigemCBActionPerformed
-
-    private void valorOrigemFormatadoTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorOrigemFormatadoTFActionPerformed
-        
-    }//GEN-LAST:event_valorOrigemFormatadoTFActionPerformed
-
-    private void resultadoFormatadoTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoFormatadoTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resultadoFormatadoTFActionPerformed
     
     private void validaEntrada(String entrada){
         String regex = "^\\d+(?:[,.]\\d+)?$";
@@ -281,9 +255,9 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> moedaDestinoCB;
     private javax.swing.JComboBox<String> moedaOrigemCB;
-    private javax.swing.JTextField resultadoFormatadoTF;
     private javax.swing.JTextField resultadoTF;
-    private javax.swing.JTextField valorOrigemFormatadoTF;
+    private javax.swing.JLabel valorDestinoLB;
+    private javax.swing.JLabel valorOrigemLB;
     private javax.swing.JTextField valorTF;
     // End of variables declaration//GEN-END:variables
 }
