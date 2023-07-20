@@ -56,4 +56,3 @@ As taxas de câmbio utilizadas pelo conversor são obtidas através da API da Aw
 - Correção de bugs 🐞
 
 Sinta-se à vontade para contribuir com o projeto, reportar problemas ou sugerir melhorias!
-
