@@ -76,6 +76,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         });
 
         converterBT.setText("Converter");
+        converterBT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         converterBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 converterBTActionPerformed(evt);
@@ -97,7 +98,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(156, Short.MAX_VALUE)
+                .addContainerGap(123, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -110,7 +111,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
                         .addComponent(converterBT)))
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +126,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
                 .addComponent(valorOrigemLB)
                 .addGap(27, 27, 27)
                 .addComponent(valorDestinoLB)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(valorTF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -135,7 +136,7 @@ public class InterfaceGrafica extends javax.swing.JFrame {
                     .addComponent(moedaDestinoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(converterBT)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,12 +165,11 @@ public class InterfaceGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Você deve selecionar uma moeda de destino", "Erro", JOptionPane.ERROR_MESSAGE);
         }
         else{
-            moedaOrigem.setValor(Double.parseDouble(valorTF.getText().replace(',', '.')));
-            double resultado = conversor.converter(moedaOrigem, moedaDestino);
-            resultadoTF.setText(String.valueOf(resultado));
-            valorOrigemLB.setText(valorTF.getText()+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
+            moedaOrigem.setValor(conversor.stringToDouble(valorTF.getText()));
+            String resultado = conversor.formatacaoMonetaria(conversor.converter(moedaOrigem, moedaDestino));
+            resultadoTF.setText(resultado);
+                valorOrigemLB.setText(valorTF.getText()+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
             valorDestinoLB.setText(resultadoTF.getText() + " " + moedaDestinoCB.getSelectedItem().toString());
-            
             
         }
 
@@ -222,7 +222,6 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

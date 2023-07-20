@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -55,6 +59,17 @@ public class Conversor {
 
 	    return valor;
 	}
+    
+    public double stringToDouble(String valor){
+        return Double.parseDouble(valor.replace(',', '.'));
+    }
+    
+    public String formatacaoMonetaria(double valor){
+        Currency currency = Currency.getInstance("USD");
+        NumberFormat formatoMonetario = DecimalFormat.getCurrencyInstance(Locale.getDefault());
+        formatoMonetario.setCurrency(currency);
+        return formatoMonetario.format(valor).replace("US$", "");
+    }
     
     public double converter(Moeda moedaOrigem, Moeda moedaDestino){
         double cambio = obterValorDaAPI(moedaOrigem, moedaDestino);
