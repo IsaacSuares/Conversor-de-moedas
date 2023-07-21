@@ -39,6 +39,7 @@ As taxas de câmbio utilizadas pelo conversor são obtidas através da API da Aw
   - java.net
   - java.swing
   - org.json
+  - com.formdev.flatlaf
     
 
 ## Utilização 🚀
