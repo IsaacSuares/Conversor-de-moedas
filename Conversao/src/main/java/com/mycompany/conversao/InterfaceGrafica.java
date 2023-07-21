@@ -4,7 +4,9 @@
  */
 package com.mycompany.conversao;
 
+
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -18,8 +20,6 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     public InterfaceGrafica() {
         super("Conversor de Moedas");
         initComponents();
-        //valorOrigemFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
-        //resultadoFormatadoTF.setBackground(new java.awt.Color(0,0,0,1));
         setVisible(true);
     }
     
@@ -38,19 +38,18 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         moedaOrigemCB = new javax.swing.JComboBox<>();
         moedaDestinoCB = new javax.swing.JComboBox<>();
         valorTF = new javax.swing.JTextField();
         converterBT = new javax.swing.JButton();
         resultadoTF = new javax.swing.JTextField();
-        valorOrigemLB = new javax.swing.JLabel();
         valorDestinoLB = new javax.swing.JLabel();
+        valorOrigemLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(48, 49, 52));
-        jPanel1.setPreferredSize(new java.awt.Dimension(720, 480));
+        setForeground(java.awt.Color.darkGray);
+        setPreferredSize(new java.awt.Dimension(720, 480));
+        setResizable(false);
 
         moedaOrigemCB.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         moedaOrigemCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Selecione>", "Real", "Dólar", "Euro" }));
@@ -88,77 +87,62 @@ public class InterfaceGrafica extends javax.swing.JFrame {
         resultadoTF.setFont(new java.awt.Font("Serif", 0, 16)); // NOI18N
         resultadoTF.setForeground(new java.awt.Color(154, 160, 157));
 
-        valorOrigemLB.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        valorOrigemLB.setForeground(new java.awt.Color(154, 160, 157));
-
         valorDestinoLB.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         valorDestinoLB.setForeground(new java.awt.Color(232, 234, 237));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(valorTF)
-                            .addComponent(resultadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(moedaDestinoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(converterBT)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valorOrigemLB, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valorDestinoLB, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(249, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(valorOrigemLB)
-                .addGap(27, 27, 27)
-                .addComponent(valorDestinoLB)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(valorTF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(resultadoTF)
-                    .addComponent(moedaDestinoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(converterBT)
-                .addContainerGap(87, Short.MAX_VALUE))
-        );
+        valorOrigemLB.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        valorOrigemLB.setForeground(new java.awt.Color(154, 160, 157));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(valorDestinoLB, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(valorTF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(resultadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(moedaDestinoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(converterBT))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(valorOrigemLB, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(valorOrigemLB)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(valorDestinoLB)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(valorTF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(moedaOrigemCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resultadoTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(moedaDestinoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(converterBT)
+                .addGap(62, 62, 62))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     private void converterBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_converterBTActionPerformed
         resultadoTF.setText("");
         validaEntrada(valorTF.getText());
@@ -173,11 +157,10 @@ public class InterfaceGrafica extends javax.swing.JFrame {
             moedaOrigem.setValor(conversor.stringToDouble(valorTF.getText()));
             String resultado = conversor.formatacaoMonetaria(conversor.converter(moedaOrigem, moedaDestino));
             resultadoTF.setText(resultado);
-                valorOrigemLB.setText(conversor.formatacaoMonetaria((moedaOrigem.getValor()))+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
+            valorOrigemLB.setText(conversor.formatacaoMonetaria((moedaOrigem.getValor()))+" " + moedaOrigemCB.getSelectedItem().toString() + " igual a ");
             valorDestinoLB.setText(resultadoTF.getText() + " " + moedaDestinoCB.getSelectedItem().toString());
-            
-        }
 
+        }
     }//GEN-LAST:event_converterBTActionPerformed
 
     private void valorTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTFActionPerformed
@@ -211,7 +194,8 @@ public class InterfaceGrafica extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_moedaOrigemCBActionPerformed
-    
+
+        
     private void validaEntrada(String entrada){
         String regex = "^\\d+(?:[,.]\\d+)?$";
             if (!valorTF.getText().matches(regex)){
@@ -256,7 +240,6 @@ public class InterfaceGrafica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton converterBT;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> moedaDestinoCB;
     private javax.swing.JComboBox<String> moedaOrigemCB;
     private javax.swing.JTextField resultadoTF;
