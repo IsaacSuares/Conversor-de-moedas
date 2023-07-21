@@ -5,6 +5,9 @@
 package com.mycompany.conversao;
 
 
+import java.awt.Image;
+import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 
 
@@ -20,7 +23,17 @@ public class InterfaceGrafica extends javax.swing.JFrame {
     public InterfaceGrafica() {
         super("Conversor de Moedas");
         initComponents();
+        Image iconImage = null;
+        try {
+            iconImage = ImageIO.read(new File("C:\\Users\\isaac\\Conversor-de-moedas\\Conversao\\src\\main\\java\\textures\\budget.png"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Define a imagem como ícone do JFrame
+        setIconImage(iconImage);
         setVisible(true);
+        
     }
     
     
